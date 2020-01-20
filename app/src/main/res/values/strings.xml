@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Sales</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_payment">Payment</string>
+    <string name="total_a_pagar">TOTAL A PAGAR</string>
+    <string name="default_price">R$ 0,00</string>
+    <string name="backimage">BackImage</string>
+    <string name="dinheiro">DINHEIRO</string>
+    <string name="debito">DÉBITO</string>
+    <string name="credito">CRÉDITO</string>
+    <string name="vr">V.R.</string>
+    <string name="cupom">CUPOM</string>
+    <string name="company_name">Eyemobile Tecnologia LTDA</string>
+    <string name="company_address">Rua Airton Roberto de Oliveira Número 64</string>
+    <string name="title_activity_receipt">ReceiptActivity</string>
+    <string name="bt_confirmar">CONFIRMAR</string>
+</resources>

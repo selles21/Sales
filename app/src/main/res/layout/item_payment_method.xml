@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="br.selles21.sales.model.PaymentMethod" />
+
+        <variable
+            name="handler"
+            type="br.selles21.sales.payment.PaymentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+<!--        android:src="@{item.resource}"-->
+
+
+        <ImageView
+            android:id="@+id/iv_payment_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_debit"
+            app:layout_constraintBottom_toTopOf="@id/tv_payment_den"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_debit" />
+
+        <TextView
+            android:id="@+id/tv_payment_den"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.value}"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_payment_icon"
+            tools:text="DEBITO" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

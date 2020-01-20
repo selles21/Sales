@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.selles21.sales">
+
+    <application
+        android:name=".SalesApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".receipt.ReceiptActivity"
+            android:label="@string/title_activity_receipt"
+            android:parentActivityName=".payment.PaymentActivity"
+            android:theme="@style/AppThemeTahoma">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.selles21.sales.payment.PaymentActivity" />
+        </activity>
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:label="@string/title_activity_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDIN">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

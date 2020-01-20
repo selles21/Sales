@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="br.selles21.sales.payment.PaymentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_vr"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:onClick="@{handler::viewpagerElementPressed}"
+            android:text="@string/vr"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:drawableTop="@drawable/ic_cupom"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:onClick="@{handler::viewpagerElementPressed}"
+            android:text="@string/cupom"
+            android:textColor="@android:color/black"
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</layout>

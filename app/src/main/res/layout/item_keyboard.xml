@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="keyboard"
+            type="br.selles21.sales.payment.KeyBoardItemType" />
+
+        <variable
+            name="handler"
+            type="br.selles21.sales.payment.PaymentViewModel" />
+
+        <variable
+            name="item"
+            type="br.selles21.sales.payment.KeyBoardItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/state_selector"
+        android:gravity="center"
+        android:onClick="@{()->handler.itemPressed(item)}">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{item.value}"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:textvisibility="@{item.type}" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/backimage"
+            android:src="@{item}"
+            android:tint="@android:color/white"
+            app:imagevisibility="@{item.type}" />
+
+    </LinearLayout>
+</layout>
