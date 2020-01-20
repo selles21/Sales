@@ -6,7 +6,6 @@ import androidx.databinding.DataBindingUtil
 import br.selles21.sales.R
 import br.selles21.sales.databinding.ActivityReceiptBinding
 import br.selles21.sales.databinding.ViewReceiptBinding
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_receipt.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
@@ -21,7 +20,6 @@ class ReceiptActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityReceiptBinding = DataBindingUtil.setContentView(this, R.layout.activity_receipt)
-//        setContentView(R.layout.activity_receipt)
         setSupportActionBar(toolbar)
 
         title = "PAGAMENTO REALIZADO COM SUCESSO"
@@ -36,11 +34,6 @@ class ReceiptActivity : AppCompatActivity() {
             inflate.executePendingBindings()
 
             receiptViewModel.start(inflate.root)
-            Snackbar.make(
-                bt_confirmar,
-                it.getString("type") + "-" + it.getString("value"),
-                Snackbar.LENGTH_SHORT
-            ).show()
         }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
